@@ -1,7 +1,7 @@
 # switchreducerr
 [![npm](https://img.shields.io/npm/l/switchreducer.svg)](https://github.com/artisin/switchreducer/blob/master/LICENSE.txt)
 [![npm](https://img.shields.io/npm/v/switchreducer.svg)](https://www.npmjs.com/package/switchreducer)
-[![wercker status](https://app.wercker.com/status/318ec4f5595dcc395d305e27825e20bd/s/master "wercker status")](https://app.wercker.com/project/byKey/318ec4f5595dcc395d305e27825e20bd)
+[![wercker status](https://app.wercker.com/status/e388b87aecbfc99fb4b0abb9c16a602c/s/master "wercker status")](https://app.wercker.com/project/byKey/e388b87aecbfc99fb4b0abb9c16a602c)
 [![David](https://img.shields.io/david/artisin/switchreducer.svg)](https://github.com/artisin/switchreducer/blob/master/package.json)
 
 ## Description
