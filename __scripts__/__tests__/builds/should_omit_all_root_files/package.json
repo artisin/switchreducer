@@ -1,0 +1,51 @@
+{
+  "name": "project-name",
+  "version": "0.0.0",
+  "description": "A build script",
+  "license": "MIT",
+  "author": "Joe",
+  "main": "dist/project-name.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/project-name"
+  },
+  "bugs": {
+    "url": "https://github.com/user/project-name/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "build": "yarn run clean && env-cmd production webpack --color --progress",
+    "clean": "rm -rf dist/*",
+    "commit": "git cz",
+    "dev": "yarn run clean && env-cmd development webpack -w",
+    "prepare": "npm test",
+    "prepublishOnly": "yarn run build",
+    "test:build": "yarn install"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "env-cmd": "7.0.0",
+    "eslint": "^4.3.0",
+    "eslint-plugin-lodash": "2.4.5",
+    "eslint-plugin-node": "5.2.0",
+    "fs-extra": "^4.0.1",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

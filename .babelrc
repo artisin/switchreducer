@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "4",
+        "browsers": ["last 3 versions"]
+      },
+    }]
+  ],
+  "plugins": [
+    ["transform-inline-environment-variables", {
+      "include": [
+        "NODE_ENV"
+      ]
+    }],
+    ["lodash", { "id": ["lodash"] }],
+    ["module-resolver", {
+      "root": ["."]
+    }]
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "project-name",
+  "version": "0.0.0",
+  "description": "A build script",
+  "license": "MIT",
+  "author": "Joe",
+  "main": "dist/project-name.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/project-name"
+  },
+  "bugs": {
+    "url": "https://github.com/user/project-name/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "build": "npm run clean && env-cmd production webpack --color --progress",
+    "clean": "rm -rf dist/*",
+    "commit": "git cz",
+    "dev": "npm run clean && env-cmd development webpack -w",
+    "prepare": "npm test",
+    "prepublishOnly": "npm run test && npm run build",
+    "release:major": "npm run test && bumped release major",
+    "release:minor": "npm run test && bumped release minor",
+    "release:patch": "npm run test && bumped release patch",
+    "test": "npm run build && env-cmd test mocha  --compilers js:babel-core/register __tests__/tests.run.js",
+    "test:build": "npm install"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "bumped": "^0.10.4",
+    "bumped-changelog": "^0.3.10",
+    "bumped-terminal": "^0.7.3",
+    "commitizen": "^2.9.6",
+    "cz-customizable-te": "^6.0.0",
+    "env-cmd": "7.0.0",
+    "eslint": "^4.3.0",
+    "eslint-plugin-lodash": "2.4.5",
+    "eslint-plugin-node": "5.2.0",
+    "fs-extra": "^4.0.1",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "should": "^13.1.0",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable-te"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+files:
+  - package.json
+plugins:
+  postrelease:
+    # Bumps the package.json version
+    Committing new version:
+      plugin: bumped-terminal
+      command: 'git add package.json && git commit -m "release($newVersion): Release: $newVersion"'
+    Generating CHANGELOG.md file:
+      plugin: bumped-changelog
+    Updating new version:
+      plugin: bumped-terminal
+      command: 'git add CHANGELOG.md && git commit --amend -m "release($newVersion): Release: $newVersion"'
